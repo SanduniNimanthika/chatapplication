@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "492030414778",
+    "firebase_url": "https://chatapp-61284.firebaseio.com",
+    "project_id": "chatapp-61284",
+    "storage_bucket": "chatapp-61284.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492030414778:android:50e1278594031a008a1783",
+        "android_client_info": {
+          "package_name": "sanduniniman.chatapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492030414778-5mv0pphvo463o2ip76nimsql60566ld9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcZoa1cQ7j0dJwoYRizAqgy7ou567hEXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492030414778-5mv0pphvo463o2ip76nimsql60566ld9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
