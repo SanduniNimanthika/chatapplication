@@ -30,6 +30,7 @@ class HomeScreenState extends State<HomeScreen> {
 final String currentUserID;
   homePageHeader(){
     return AppBar(
+
       automaticallyImplyLeading: false,
       actions: <Widget>[
         IconButton(
@@ -37,10 +38,10 @@ final String currentUserID;
             Navigator.push(context, MaterialPageRoute(builder:
                 (context)=>Settings()));
           },
-          icon: Icon(Icons.settings),
+          icon: Icon(Icons.settings,color: Colors.white,),
         )
       ],
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.purple,
       title: Container(
         margin: EdgeInsets.only(bottom: 4.0),
         child: TextFormField(
@@ -88,10 +89,12 @@ color: Colors.white,
   }
   @override
   Widget build(BuildContext context) {
-       return Scaffold(
-         appBar:homePageHeader(),
-         body: futureSearch==null ? displaySearchResultScreen():displayUsaerScreen(),
+       return SafeArea(
+         child: Scaffold(
+           appBar:homePageHeader(),
+           body: futureSearch==null ? displaySearchResultScreen():displayUsaerScreen(),
 
+         ),
        );
 
 
@@ -123,9 +126,13 @@ color: Colors.white,
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            Icon(Icons.group,color: Colors.lightBlueAccent,size: 200,),
+            Icon(Icons.group,color: Colors.purple,size: 200,),
             Text("Search user",
-            textAlign: TextAlign.center,
+            textAlign: TextAlign.center,style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20,
+                  color: Colors.purple),
             )
           ],
 
@@ -153,7 +160,7 @@ class UserResult extends StatelessWidget
               onTap:()=>sendUserTouch(context),
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: Colors.black87,
+                  backgroundColor: Colors.black87, 
                   backgroundImage: CachedNetworkImageProvider(eachUser.photoUrl),
                 ),
                 title: Text(eachUser.nickname),
